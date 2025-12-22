@@ -102,10 +102,10 @@ Create a `.env` file in the project root directory:
 
 ```bash
 # Windows
-copy .env.example .env
+type nul > .env
 
 # Linux/Mac
-cp .env.example .env
+touch .env
 ```
 
 Then edit `.env` and add your secret key:
