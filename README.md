@@ -111,7 +111,7 @@ touch .env
 Then edit `.env` and add your secret key:
 
 ```env
-SECRET_KEY=your-secret-key-here
+DJANGO_SECRET_KEY=your-secret-key-here
 ```
 
 **Generate a secure SECRET_KEY:**
@@ -120,7 +120,7 @@ SECRET_KEY=your-secret-key-here
 python3 -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 ```
 
-Copy the output and paste it as your `SECRET_KEY` in `.env` file.
+Copy the output and paste it as your `DJANGO_SECRET_KEY` in `.env` file.
 
 5. **Apply migrations**
 ```bash
