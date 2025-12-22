@@ -126,6 +126,7 @@ Copy the output and paste it as your `DJANGO_SECRET_KEY` in `.env` file.
 ```bash
 python3 manage.py makemigrations
 python3 manage.py migrate
+python3 manage.py flush
 ```
 
 6. **Create superuser (admin account)**
