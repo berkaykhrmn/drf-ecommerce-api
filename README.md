@@ -29,7 +29,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 - Product search and filtering
 - Admin-only product management
 
-### Shopping Cart
+### Cart
 - Add/remove products
 - Update product quantities
 - Clear entire cart
@@ -42,7 +42,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 - Admin order management panel
 - Mock payment processing
 
-### Review System
+### Comment System
 - Product comments/reviews
 - User-based review management
 - CRUD operations for reviews
