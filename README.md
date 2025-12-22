@@ -76,7 +76,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/drf-ecommerce-api.git
+git clone https://github.com/berkaykhrmn/drf-ecommerce-api.git
 cd drf-ecommerce-api
 ```
 
