@@ -200,7 +200,7 @@ The documentation provides:
 | PUT/PATCH | `/api/categories/{id}/` | Update category | Admin |
 | DELETE | `/api/categories/{id}/` | Delete category | Admin |
 
-### Shopping Cart
+### Cart
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
 | GET | `/api/cart/` | Get user's cart | Yes |
@@ -220,7 +220,7 @@ The documentation provides:
 | GET | `/api/orders/admin/{order_id}/` | Get order detail | Admin |
 | PUT/PATCH | `/api/orders/admin/{order_id}/` | Update order status | Admin |
 
-### Comments/Reviews
+### Comments
 | Method | Endpoint | Description | Auth Required |
 |--------|----------|-------------|---------------|
 | GET | `/api/comments/` | List all comments | No |
