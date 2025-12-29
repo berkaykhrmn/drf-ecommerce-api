@@ -14,6 +14,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 - [Installation](#installation)
 - [API Documentation](#api-documentation)
 - [API Endpoints](#api-endpoints)
+- [Testing](#testing)
 
 ## ✨ Features
 
@@ -52,8 +53,9 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 - RESTful API design
 - Permission-based access control
 - Admin dashboard integration
-- **Custom management commands for database seeding**
+- Custom management commands for database seeding
 - Sample data generation for testing and demos
+- **Comprehensive test coverage** (unit tests for models, serializers, and views)
 
 ## 🛠️ Technologies
 
@@ -229,3 +231,35 @@ The documentation provides:
 | PUT/PATCH | `/api/comments/{id}/` | Update comment | Owner |
 | DELETE | `/api/comments/{id}/` | Delete comment | Owner |
 
+## 🧪 Testing
+
+The project includes comprehensive test coverage across all applications to ensure code quality and reliability.
+
+### Applications with Tests
+- ✅ **Products** - Product and Category models, CRUD operations
+- ✅ **Cart** - Cart and CartItem functionality
+- ✅ **Orders** - Order creation, payment processing, and status management
+- ✅ **User Authentication** - Registration, login, profile updates
+- ✅ **Comments** - Review creation and management
+
+### Running Tests
+
+**Run all tests:**
+```bash
+python3 manage.py test
+```
+
+**Run tests for a specific app:**
+```bash
+python3 manage.py test products
+python3 manage.py test carts
+python3 manage.py test orders
+python3 manage.py test users
+python3 manage.py test comments
+python3 manage.py test categories
+```
+
+**Run a specific test file:**
+```bash
+python manage.py test products.tests.test_views
+```
