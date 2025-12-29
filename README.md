@@ -236,11 +236,12 @@ The documentation provides:
 The project includes comprehensive test coverage across all applications to ensure code quality and reliability.
 
 ### Applications with Tests
-- ✅ **Products** - Product and Category models, CRUD operations
+- ✅ **Products** - Product models, CRUD operations
 - ✅ **Cart** - Cart and CartItem functionality
 - ✅ **Orders** - Order creation, payment processing, and status management
 - ✅ **User Authentication** - Registration, login, profile updates
 - ✅ **Comments** - Review creation and management
+- ✅ **Categories** - Category models, CRUD operations
 
 ### Running Tests
 
