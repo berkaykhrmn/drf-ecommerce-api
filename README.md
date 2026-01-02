@@ -59,7 +59,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 
 ## 🛠️ Technologies
 
-- **Backend Framework**: Django 4.x
+- **Backend Framework**: Django
 - **API Framework**: Django Rest Framework
 - **Authentication**: Token/JWT Authentication
 - **API Documentation**: drf-yasg (Swagger/OpenAPI)
@@ -72,6 +72,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 
 - Python 3.8 or higher
 - pip (Python package manager)
+- virtualenv
 - Git
 
 ### Setup Steps
