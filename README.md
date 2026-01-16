@@ -2,10 +2,12 @@
 
 A full-featured e-commerce REST API built with Django Rest Framework, featuring user authentication, product management, shopping cart, order processing, and interactive Swagger documentation.
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![Django](https://img.shields.io/badge/Django-4.0+-green.svg)
-![DRF](https://img.shields.io/badge/DRF-3.14+-red.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Django](https://img.shields.io/badge/Django-4.0+-092E20?logo=django)
+![Django REST](https://img.shields.io/badge/DRF-3.14+-A30000?logo=django)
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange?logo=jsonwebtokens)
+![Swagger](https://img.shields.io/badge/API-Swagger-85EA2D?logo=swagger)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 📋 Table of Contents
 
