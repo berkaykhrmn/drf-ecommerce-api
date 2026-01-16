@@ -7,6 +7,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 ![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python)
 ![JWT](https://img.shields.io/badge/Auth-JWT-orange?logo=jsonwebtokens)
 ![Swagger](https://img.shields.io/badge/API-Swagger-85EA2D?logo=swagger)
+![Tests](https://img.shields.io/badge/Tests-Comprehensive-success)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 📋 Table of Contents
