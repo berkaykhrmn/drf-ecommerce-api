@@ -2,13 +2,13 @@
 
 A full-featured e-commerce REST API built with Django Rest Framework, featuring user authentication, product management, shopping cart, order processing, and interactive Swagger documentation.
 
-![Django](https://img.shields.io/badge/Django-4.0+-092E20?logo=django)
-![Django REST](https://img.shields.io/badge/DRF-3.14+-A30000?logo=django)
-![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python)
-![JWT](https://img.shields.io/badge/Auth-JWT-orange?logo=jsonwebtokens)
-![Swagger](https://img.shields.io/badge/API-Swagger-85EA2D?logo=swagger)
-![Tests](https://img.shields.io/badge/Tests-Comprehensive-success)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![Django](https://img.shields.io/badge/Django-6.0+-092E20?logo=django&logoColor=white&style=for-the-badge)
+![Django REST Framework](https://img.shields.io/badge/DRF-3.16+-ff1709?logo=django&logoColor=white&style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white&style=for-the-badge)
+![JWT](https://img.shields.io/badge/JWT-black?logo=jsonwebtokens&logoColor=white&style=for-the-badge)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=white&style=for-the-badge)
+![Pytest](https://img.shields.io/badge/Pytest-0f0?logo=pytest&logoColor=black&style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
 ## 📋 Table of Contents
 
