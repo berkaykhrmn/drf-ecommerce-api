@@ -1,4 +1,4 @@
-# 🛍️ DRF E-Commerce REST API
+# DRF E-Commerce REST API
 
 A full-featured e-commerce REST API built with Django Rest Framework, featuring user authentication, product management, shopping cart, order processing, and interactive Swagger documentation.
 
@@ -10,7 +10,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 ![Pytest](https://img.shields.io/badge/Pytest-0f0?logo=pytest&logoColor=black&style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [Technologies](#technologies)
@@ -19,7 +19,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 - [API Endpoints](#api-endpoints)
 - [Testing](#testing)
 
-## ✨ Features
+## Features
 
 ### User Management
 - User registration and authentication
@@ -60,7 +60,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 - Sample data generation for testing and demos
 - **Comprehensive test coverage** (unit tests for models, serializers, and views)
 
-## 🛠️ Technologies
+## Technologies
 
 - **Backend Framework**: Django
 - **API Framework**: Django Rest Framework
@@ -69,7 +69,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 - **Database**: SQLite (Development) / PostgreSQL (Production Ready)
 - **Python**: 3.8+
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -167,7 +167,7 @@ The server will start at `http://127.0.0.1:8000`
 - Swagger Documentation: `http://127.0.0.1:8000/api/docs`
 - Admin Panel: `http://127.0.0.1:8000/admin/`
 
-## 📚 API Documentation
+## API Documentation
 
 Interactive API documentation is available through Swagger UI at `/api/` endpoint.
 
@@ -235,7 +235,7 @@ The documentation provides:
 | PUT/PATCH | `/api/comments/{id}/` | Update comment | Owner |
 | DELETE | `/api/comments/{id}/` | Delete comment | Owner |
 
-## 🧪 Testing
+## Testing
 
 The project includes comprehensive test coverage across all applications to ensure code quality and reliability.
 
