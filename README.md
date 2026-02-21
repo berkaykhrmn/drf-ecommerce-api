@@ -8,6 +8,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 ![JWT](https://img.shields.io/badge/JWT-black?logo=jsonwebtokens&logoColor=white&style=for-the-badge)
 ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=white&style=for-the-badge)
 ![Pytest](https://img.shields.io/badge/Pytest-0f0?logo=pytest&logoColor=black&style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
 ## Table of Contents
@@ -15,6 +16,8 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 - [Features](#features)
 - [Technologies](#technologies)
 - [Installation](#installation)
+  - [Option 1: Docker (Recommended)](#option-1-docker-recommended)
+  - [Option 2: Manual Setup](#option-2-manual-setup)
 - [API Documentation](#api-documentation)
 - [API Endpoints](#api-endpoints)
 - [Testing](#testing)
@@ -67,18 +70,95 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 - **Authentication**: Token/JWT Authentication
 - **API Documentation**: drf-yasg (Swagger/OpenAPI)
 - **Database**: SQLite (Development) / PostgreSQL (Production Ready)
-- **Python**: 3.8+
+- **Python**: 3.12+
+- **Containerization**: Docker & Docker Compose
+
+---
 
 ## Installation
 
-### Prerequisites
+### Option 1: Docker (Recommended)
+
+The easiest way to get up and running. Docker handles the database (PostgreSQL), dependencies, and server automatically.
+
+#### Prerequisites
+
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+#### Setup Steps
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/berkaykhrmn/drf-ecommerce-api.git
+cd drf-ecommerce-api
+```
+
+2. **Create the `.env` file**
+
+```bash
+# Linux/Mac
+touch .env
+
+# Windows
+type nul > .env
+```
+
+Add the following to your `.env` file:
+
+```env
+DJANGO_SECRET_KEY=your-secret-key-here
+```
+
+Generate a secure secret key:
+
+```bash
+python3 -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+```
+
+3. **Build and start the containers**
+
+```bash
+docker compose up --build
+```
+
+This will:
+- Start a PostgreSQL 16 database container
+- Build the Django application image
+- Run database migrations automatically
+- Start the Gunicorn server on port `8000`
+
+4. **Create a superuser (admin account)**
+
+In a separate terminal, while the containers are running:
+
+```bash
+docker compose exec web python manage.py createsuperuser
+```
+
+5. **Load sample data (optional but recommended)**
+
+```bash
+docker compose exec web python manage.py seed
+```
+
+6. **Access the application**
+- API Root: `http://127.0.0.1:8000/api/`
+- Swagger Documentation: `http://127.0.0.1:8000/docs/`
+- Admin Panel: `http://127.0.0.1:8000/admin/`
+
+---
+
+### Option 2: Manual Setup
+
+#### Prerequisites
 
 - Python 3.8 or higher
 - pip (Python package manager)
 - virtualenv
 - Git
 
-### Setup Steps
+#### Setup Steps
 
 1. **Clone the repository**
 ```bash
@@ -102,37 +182,32 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. **Environment Configuration**
-
-Create a `.env` file in the project root directory:
+4. **Create the `.env` file**
 
 ```bash
-# Windows
-type nul > .env
-
 # Linux/Mac
 touch .env
+
+# Windows
+type nul > .env
 ```
 
-Then edit `.env` and add your secret key:
+Add the following to your `.env` file:
 
 ```env
 DJANGO_SECRET_KEY=your-secret-key-here
 ```
 
-**Generate a secure SECRET_KEY:**
+Generate a secure secret key:
 
 ```bash
 python3 -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
 ```
 
-Copy the output and paste it as your `DJANGO_SECRET_KEY` in `.env` file.
-
 5. **Apply migrations**
 ```bash
 python3 manage.py makemigrations
 python3 manage.py migrate
-python3 manage.py flush
 ```
 
 6. **Create superuser (admin account)**
@@ -140,9 +215,7 @@ python3 manage.py flush
 python3 manage.py createsuperuser
 ```
 
-Follow the prompts to create your admin account.
-
-7. **Load sample data (recommended for testing)**
+7. **Load sample data (optional but recommended)**
 ```bash
 python3 manage.py seed
 ```
@@ -153,23 +226,21 @@ This command will populate your database with:
 - Test user accounts
 - Sample reviews and comments
 
-**Note:** This step is optional but highly recommended for testing the API functionality.
-
 8. **Run development server**
 ```bash
 python3 manage.py runserver
 ```
 
-The server will start at `http://127.0.0.1:8000`
-
 9. **Access the application**
 - API Root: `http://127.0.0.1:8000/api/`
-- Swagger Documentation: `http://127.0.0.1:8000/api/docs`
+- Swagger Documentation: `http://127.0.0.1:8000/docs/`
 - Admin Panel: `http://127.0.0.1:8000/admin/`
+
+---
 
 ## API Documentation
 
-Interactive API documentation is available through Swagger UI at `/api/` endpoint.
+Interactive API documentation is available through Swagger UI at `/docs/`.
 
 The documentation provides:
 - Complete list of all endpoints
