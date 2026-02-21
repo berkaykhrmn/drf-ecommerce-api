@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 from decouple import config
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,10 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -127,10 +128,10 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'product_list_user': '10/min',
         'comment_create': '3/5min',
-        'min_anon_request': '10/min',
-        'max_anon_request': '1000/day',
-        'min_user_request': '100/min',
-        'max_user_request': '10000/day',
+        'min_anon_request': '200/min',
+        'max_anon_request': '2000/day',
+        'min_user_request': '400/min',
+        'max_user_request': '40000/day',
     },
     'EXCEPTION_HANDLER': 'core.exceptions.custom_exception_handler',
         'DEFAULT_PAGINATION_CLASS': 'core.pagination.StandardResultsSetPagination',
@@ -158,6 +159,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.getenv('DJANGO_STATIC_ROOT', BASE_DIR / 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
