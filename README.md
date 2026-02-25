@@ -68,7 +68,7 @@ A full-featured e-commerce REST API built with Django Rest Framework, featuring 
 - **Backend Framework**: Django
 - **API Framework**: Django Rest Framework
 - **Authentication**: Token/JWT Authentication
-- **API Documentation**: drf-yasg (Swagger/OpenAPI)
+- **API Documentation**: drf-spectacular (Swagger/OpenAPI)
 - **Database**: SQLite (Development) / PostgreSQL (Production Ready)
 - **Python**: 3.12+
 - **Containerization**: Docker & Docker Compose
@@ -144,7 +144,7 @@ docker compose exec web python manage.py seed
 
 6. **Access the application**
 - API Root: `http://127.0.0.1:8000/api/`
-- Swagger Documentation: `http://127.0.0.1:8000/docs/`
+- Swagger Documentation: `http://127.0.0.1:8000/api/docs/`
 - Admin Panel: `http://127.0.0.1:8000/admin/`
 
 ---
@@ -233,14 +233,14 @@ python3 manage.py runserver
 
 9. **Access the application**
 - API Root: `http://127.0.0.1:8000/api/`
-- Swagger Documentation: `http://127.0.0.1:8000/docs/`
+- Swagger Documentation: `http://127.0.0.1:8000/api/docs/`
 - Admin Panel: `http://127.0.0.1:8000/admin/`
 
 ---
 
 ## API Documentation
 
-Interactive API documentation is available through Swagger UI at `/docs/`.
+Interactive API documentation is available through Swagger UI at `/api/docs/`.
 
 The documentation provides:
 - Complete list of all endpoints
